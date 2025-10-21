@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 import StatCard from "@/components/StatCard";
@@ -16,7 +14,6 @@ import libraryProject from "@/assets/library-project.jpg";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -291,8 +288,6 @@ const Index = () => {
           </AnimatedSection>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

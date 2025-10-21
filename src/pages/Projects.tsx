@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 import { Card } from "@/components/ui/card";
@@ -14,8 +12,6 @@ import libraryProject from "@/assets/library-project.jpg";
 const Projects = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-
       {/* Hero Banner */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-20">
         <div className="absolute inset-0">
@@ -191,8 +187,6 @@ const Projects = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

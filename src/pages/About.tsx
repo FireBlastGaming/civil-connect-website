@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -42,8 +40,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
-
       {/* Hero Banner */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-20">
         <div className="absolute inset-0">
@@ -228,8 +224,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

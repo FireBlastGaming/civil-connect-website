@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,8 +19,6 @@ const NapRoomProject = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
-
       {/* Breadcrumb */}
       <div className="bg-muted/30 py-4 mt-20">
         <div className="container mx-auto px-4">
@@ -247,8 +243,6 @@ const NapRoomProject = () => {
           </AnimatedSection>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -94,8 +92,6 @@ const GetInvolved = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden mt-20">
         <div className="absolute inset-0">
@@ -416,8 +412,6 @@ const GetInvolved = () => {
           </AnimatedSection>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
