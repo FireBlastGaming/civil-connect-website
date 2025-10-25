@@ -53,7 +53,7 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto">
               Join a community of driven students creating tangible change in their community
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-5">
               <Link to="/get-involved" className="w-full sm:w-auto">
                 <Button
                   size="lg"
