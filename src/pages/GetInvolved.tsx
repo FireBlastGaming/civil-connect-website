@@ -138,7 +138,6 @@ const GetInvolved = () => {
                 <Card className="p-6 h-full hover:shadow-card transition-all duration-300 border-2 hover:border-accent group">
                   <motion.div
                     className="mb-4"
-                    whileHover={{ scale: 1.15 }}
                     animate={{ scale: [1, 1.05, 1] }}
                     transition={{ 
                       scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
