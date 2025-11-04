@@ -54,22 +54,21 @@ const Index = () => {
               Join a community of driven students creating tangible change in their community
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-5">
-              <Link to="/get-involved" className="w-full sm:w-auto">
+              <Link to="/get-involved">
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 h-[60px] bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full"
+                  className="text-lg px-8 py-6 h-[60px] bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105"
                 >
                   Join Us
                 </Button>
               </Link>
-              <Link to="/projects" className="w-full sm:w-auto">
+              <Link to="/projects">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-lg px-8 py-6 h-[60px] border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold transition-all duration-300 hover:scale-105 w-full"
+                  className="text-lg px-8 py-6 h-[60px] border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold transition-all duration-300 hover:scale-105"
                 >
                   View Projects
-                  <ArrowRight />
                 </Button>
               </Link>
             </div>
