@@ -224,7 +224,7 @@ const GetInvolved = () => {
                 <Button
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6"
-                  onClick={() => window.open("https://discord.com/invite/3CNjkyXFV", "_blank")}
+                  onClick={() => window.open("https://discord.gg/7dWt8WNuqh", "_blank")}
                 >
                   Join Our Discord Server
                 </Button>
@@ -296,7 +296,7 @@ const GetInvolved = () => {
                   variant="outline"
                   className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
                   onClick={() =>
-                    window.open("https://discord.com/invite/3CNjkyXFV", "_blank")
+                    window.open("https://discord.gg/7dWt8WNuqh", "_blank")
                   }
                 >
                   Join Discord Server

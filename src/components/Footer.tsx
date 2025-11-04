@@ -69,7 +69,7 @@ const Footer = () => {
                 <span>@civilconnectedmonton</span>
               </a>
               <a
-                href="https://discord.com/invite/3CNjkyXFV"
+                href="https://discord.gg/7dWt8WNuqh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-primary-foreground/80 hover:text-accent transition-colors"
