@@ -66,7 +66,7 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-lg px-8 py-6 h-[60px] border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 h-[60px] bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-semibold transition-all duration-300 hover:scale-105"
                 >
                   View Projects
                 </Button>
@@ -74,13 +74,6 @@ const Index = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <ArrowDown className="h-8 w-8 text-primary-foreground/70" />
-          </motion.div>
         </div>
       </section>
 
