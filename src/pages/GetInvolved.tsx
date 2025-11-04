@@ -250,8 +250,10 @@ const GetInvolved = () => {
             <AnimatedSection delay={0.1}>
               <Card className="p-8 text-center hover:shadow-elevated transition-all">
                 <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ 
+                    scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                  }}
                 >
                   <Instagram className="h-16 w-16 text-accent mx-auto mb-4" />
                 </motion.div>
@@ -277,8 +279,10 @@ const GetInvolved = () => {
             <AnimatedSection delay={0.2}>
               <Card className="p-8 text-center hover:shadow-elevated transition-all">
                 <motion.div
-                  whileHover={{ scale: 1.1, rotate: -5 }}
-                  transition={{ duration: 0.3 }}
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ 
+                    scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                  }}
                 >
                   <svg
                     className="h-16 w-16 text-accent mx-auto mb-4"

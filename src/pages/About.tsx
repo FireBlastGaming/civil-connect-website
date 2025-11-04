@@ -126,8 +126,10 @@ const About = () => {
                 <Card className="p-6 h-full hover:shadow-card transition-all duration-300 border-2 hover:border-accent group">
                   <motion.div
                     className="mb-4"
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
+                    animate={{ scale: [1, 1.05, 1] }}
+                    transition={{ 
+                      scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                    }}
                   >
                     <div className="inline-block p-4 bg-gradient-accent rounded-full">
                       <value.icon className="h-8 w-8 text-accent-foreground" />
