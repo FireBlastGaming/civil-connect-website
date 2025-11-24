@@ -71,7 +71,7 @@ const NotFound = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-6 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold transition-all duration-300 hover:scale-105"
+                className="text-lg px-8 py-6 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold transition-all duration-300 hover:scale-105"
               >
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 View Projects

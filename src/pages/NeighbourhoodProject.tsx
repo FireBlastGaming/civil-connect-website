@@ -218,7 +218,7 @@ const NeighbourhoodProject = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
+                    className="bg-background/10 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-all duration-300"
                   >
                     View All Projects
                   </Button>
