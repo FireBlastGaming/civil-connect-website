@@ -66,7 +66,7 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-lg px-8 py-6 h-[60px] bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-semibold transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 h-[60px] bg-background/10 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold transition-all duration-300 hover:scale-105"
                 >
                   View Projects
                 </Button>
