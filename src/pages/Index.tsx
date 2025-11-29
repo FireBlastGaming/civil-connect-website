@@ -77,6 +77,62 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Design Contest Announcement */}
+      <section className="py-16 bg-gradient-to-r from-accent via-primary to-accent relative overflow-hidden">
+        <motion.div
+          className="absolute top-0 left-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl"
+          animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute bottom-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl"
+          animate={{ x: [0, -100, 0], y: [0, -50, 0] }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
+        
+        <div className="relative z-10 container mx-auto px-4">
+          <AnimatedSection>
+            <Card className="p-8 md:p-12 bg-background/95 backdrop-blur border-2 border-accent shadow-elevated">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1 text-center md:text-left">
+                  <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold text-sm mb-4">
+                    NEW OPPORTUNITY
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                    Design Contest 2026
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Create a concept for an art installation on UAlberta's Greenspaces! 
+                    Teams of up to 6 can win <strong>$10,000</strong> in funding. 
+                    Registration closes <strong>December 19th, 2025</strong>.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <Link to="/design-contest">
+                      <Button
+                        size="lg"
+                        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+                <motion.div
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="hidden md:block"
+                >
+                  <div className="p-8 bg-primary rounded-full">
+                    <Lightbulb className="h-24 w-24 text-primary-foreground" />
+                  </div>
+                </motion.div>
+              </div>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
