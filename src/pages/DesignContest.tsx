@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy } from "lucide-react";
-import heroImage from "@/assets/hero-projects.jpg";
+import heroImage from "@/assets/hero-design-contest.jpg";
 
 const DesignContest = () => {
   return (

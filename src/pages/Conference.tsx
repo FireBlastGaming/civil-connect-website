@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Construction } from "lucide-react";
-import heroImage from "@/assets/hero-projects.jpg";
+import heroImage from "@/assets/hero-conference.jpg";
 
 const Conference = () => {
   return (
