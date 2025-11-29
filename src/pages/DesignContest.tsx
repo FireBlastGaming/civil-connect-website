@@ -153,8 +153,11 @@ const DesignContest = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-primary-foreground/90 mb-8">
-                Register your team and start creating!
+              <p className="text-xl text-primary-foreground/90 mb-4">
+                Registration opens <strong>December 1st, 2025</strong>
+              </p>
+              <p className="text-lg text-primary-foreground/80 mb-8">
+                Visit the contest site for full details, eligibility requirements, and updates!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
@@ -167,7 +170,7 @@ const DesignContest = () => {
                     size="lg"
                     className="bg-background text-primary hover:bg-background/90 font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
                   >
-                    Register Now
+                    More Info About Contest
                     <ExternalLink className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
