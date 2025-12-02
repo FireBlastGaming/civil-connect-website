@@ -11,6 +11,7 @@ import {
   Heart,
   Instagram,
   Mail,
+  Linkedin,
 } from "lucide-react";
 import heroJoin from "@/assets/hero-join.jpg";
 
@@ -246,7 +247,7 @@ const GetInvolved = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <AnimatedSection delay={0.1}>
               <Card className="p-8 text-center hover:shadow-elevated transition-all">
                 <motion.div
@@ -304,6 +305,32 @@ const GetInvolved = () => {
                   }
                 >
                   Join Discord Server
+                </Button>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <Card className="p-8 text-center hover:shadow-elevated transition-all">
+                <motion.div
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ 
+                    scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                >
+                  <Linkedin className="h-16 w-16 text-accent mx-auto mb-4" />
+                </motion.div>
+                <h3 className="text-2xl font-bold text-primary mb-3">LinkedIn</h3>
+                <p className="text-muted-foreground mb-4">
+                  Connect with us professionally and stay updated on our initiatives
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                  onClick={() =>
+                    window.open("https://www.linkedin.com/company/civil-connect-edmonton/", "_blank")
+                  }
+                >
+                  Follow on LinkedIn
                 </Button>
               </Card>
             </AnimatedSection>
