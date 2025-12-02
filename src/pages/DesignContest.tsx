@@ -70,8 +70,7 @@ const DesignContest = () => {
                 </motion.div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">Grand Prize</h3>
                 <p className="text-muted-foreground">
-                  The winning team's design will be presented to Student's Union and University 
-                  Administration for approval and funding of up to <strong>$10,000</strong>!
+                  The winning team will win a substantial cash prize and have their proposal fully engineered by a group of Civil Connect student members. It will then be proposed to the University Administration and the UASU Green Fund for funding of up to <strong>$10,000</strong>! The winning team will also get a chance to present at our Connect 2026: Sustainable Innovations Symposium!
                 </p>
               </div>
             </AnimatedSection>
@@ -87,7 +86,7 @@ const DesignContest = () => {
                 </motion.div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">Runner-Up Prizes</h3>
                 <p className="text-muted-foreground">
-                  Prizes of up to <strong>$250</strong> for runners-up teams!
+                  A prize pool of over <strong>$500</strong> is up for grabs for non-winning teams!
                 </p>
               </div>
             </AnimatedSection>
@@ -161,7 +160,7 @@ const DesignContest = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://hellowestdistrict.com/art-contest/" 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdnSRo6-H_oZ0EyfqPBRpFt7tRtu3xDzHXVSaHEqfJ8JWWRtQ/viewform" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block"
@@ -170,19 +169,25 @@ const DesignContest = () => {
                     size="lg"
                     className="bg-background text-primary hover:bg-background/90 font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
                   >
-                    More Info About Contest
+                    REGISTER HERE
                     <ExternalLink className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
-                <Link to="/get-involved">
+                <a 
+                  href="https://hellowestdistrict.com/art-contest/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
                   <Button
                     size="lg"
                     variant="outline"
                     className="bg-background/10 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
                   >
-                    Learn More About Us
+                    More Info About Contest
+                    <ExternalLink className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </AnimatedSection>
