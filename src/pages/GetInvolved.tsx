@@ -216,7 +216,7 @@ const GetInvolved = () => {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <AnimatedSection delay={0.1}>
+            <AnimatedSection delay={0.1} className="h-full">
               <Card className="p-8 text-center hover:shadow-elevated transition-all h-full">
                 <motion.div animate={{
                 scale: [1, 1.05, 1]
@@ -241,8 +241,8 @@ const GetInvolved = () => {
               </Card>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2}>
-              <Card className="p-8 text-center hover:shadow-elevated transition-all">
+            <AnimatedSection delay={0.2} className="h-full">
+              <Card className="p-8 text-center hover:shadow-elevated transition-all h-full">
                 <motion.div animate={{
                 scale: [1, 1.05, 1]
               }} transition={{
@@ -266,8 +266,8 @@ const GetInvolved = () => {
               </Card>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.3}>
-              <Card className="p-8 text-center hover:shadow-elevated transition-all">
+            <AnimatedSection delay={0.3} className="h-full">
+              <Card className="p-8 text-center hover:shadow-elevated transition-all h-full">
                 <motion.div animate={{
                 scale: [1, 1.05, 1]
               }} transition={{
