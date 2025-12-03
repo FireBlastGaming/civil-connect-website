@@ -217,7 +217,7 @@ const GetInvolved = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <AnimatedSection delay={0.1}>
-              <Card className="p-8 text-center hover:shadow-elevated transition-all py-[22px]">
+              <Card className="p-8 text-center hover:shadow-elevated transition-all h-full">
                 <motion.div animate={{
                 scale: [1, 1.05, 1]
               }} transition={{
