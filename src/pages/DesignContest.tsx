@@ -169,7 +169,7 @@ const DesignContest = () => {
                     size="lg"
                     className="bg-background text-primary hover:bg-background/90 font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
                   >
-                    REGISTER HERE
+                    Register Here
                     <ExternalLink className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
