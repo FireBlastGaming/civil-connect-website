@@ -216,8 +216,8 @@ const GetInvolved = () => {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <AnimatedSection delay={0.1} className="h-full">
-              <Card className="p-8 text-center hover:shadow-elevated transition-all h-full">
+            <AnimatedSection delay={0.1}>
+              <Card className="p-8 text-center hover:shadow-elevated transition-all">
                 <motion.div animate={{
                 scale: [1, 1.05, 1]
               }} transition={{
@@ -233,7 +233,7 @@ const GetInvolved = () => {
                 </motion.div>
                 <h3 className="text-2xl font-bold text-primary mb-3">Instagram</h3>
                 <p className="text-muted-foreground mb-4">
-                  Follow us for updates, project highlights, and behind-the-scenes content
+                  Follow us for updates, project highlights, and behind-the-scenes
                 </p>
                 <Button variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground" onClick={() => window.open("https://www.instagram.com/civilconnectedmonton/", "_blank")}>
                   @civilconnectedmonton
@@ -241,8 +241,8 @@ const GetInvolved = () => {
               </Card>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2} className="h-full">
-              <Card className="p-8 text-center hover:shadow-elevated transition-all h-full">
+            <AnimatedSection delay={0.2}>
+              <Card className="p-8 text-center hover:shadow-elevated transition-all">
                 <motion.div animate={{
                 scale: [1, 1.05, 1]
               }} transition={{
@@ -266,8 +266,8 @@ const GetInvolved = () => {
               </Card>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.3} className="h-full">
-              <Card className="p-8 text-center hover:shadow-elevated transition-all h-full">
+            <AnimatedSection delay={0.3}>
+              <Card className="p-8 text-center hover:shadow-elevated transition-all">
                 <motion.div animate={{
                 scale: [1, 1.05, 1]
               }} transition={{
