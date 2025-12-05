@@ -2,13 +2,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import Particles from "@/components/Particles";
-import CountdownTimer from "@/components/CountdownTimer";
 import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy, AlertTriangle } from "lucide-react";
 import heroImage from "@/assets/hero-ualberta.png";
 import contestPoster from "@/assets/contest-poster.png";
-
-// Registration deadline: December 19th, 2025 at 11:59 PM MST
-const REGISTRATION_DEADLINE = new Date("2025-12-19T23:59:59-07:00");
 
 const DesignContest = () => {
   return (
@@ -50,15 +46,6 @@ const DesignContest = () => {
               Create a concept for an art installation on UAlberta's Greenspaces
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Countdown Timer Section */}
-      <section className="py-12 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 border-y border-accent/20">
-        <div className="container mx-auto px-4">
-          <AnimatedSection>
-            <CountdownTimer targetDate={REGISTRATION_DEADLINE} label="⏰ Registration Closes In" />
-          </AnimatedSection>
         </div>
       </section>
 
