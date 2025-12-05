@@ -1,6 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 import StatCard from "@/components/StatCard";
+import Particles from "@/components/Particles";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -25,6 +26,7 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary/90" />
         </div>
+        <Particles count={30} />
 
         {/* Floating Shapes */}
         <motion.div
@@ -96,14 +98,14 @@ const Index = () => {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1 text-center md:text-left">
                   <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold text-sm mb-4">
-                    NEW OPPORTUNITY
+                    🎨 NEW CONTEST
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                    Design Contest 2026
+                    Design a Campus Icon!
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
                     Create a concept for an art installation on UAlberta's Greenspaces! 
-                    Teams of up to 6 can win <strong>$10,000</strong> in funding. 
+                    Teams of up to 6 undergraduate & graduate students can win <strong>$10,000</strong> in funding. 
                     Registration closes <strong>December 19th, 2025</strong>.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -306,6 +308,7 @@ const Index = () => {
       {/* Call to Action Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary" />
+        <Particles count={20} />
         <motion.div
           className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
