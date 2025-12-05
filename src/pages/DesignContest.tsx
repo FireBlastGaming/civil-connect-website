@@ -1,23 +1,28 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy } from "lucide-react";
-import heroImage from "@/assets/hero-design-contest.jpg";
+import Particles from "@/components/Particles";
+import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy, AlertTriangle } from "lucide-react";
+import heroImage from "@/assets/hero-ualberta.png";
+import contestPoster from "@/assets/contest-poster.png";
 
 const DesignContest = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with UAlberta image */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-          }}
+          style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/70" />
+          {/* Color overlay to match site theme */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/70 to-primary/80" />
+          {/* Warm accent overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-accent/10" />
+          {/* Vignette effect */}
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-primary/40" />
         </div>
+        <Particles count={25} />
 
         <div className="relative z-10 text-center px-4">
           <motion.div
@@ -25,8 +30,17 @@ const DesignContest = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6">
-              Design Contest 2026
+            <motion.span 
+              className="inline-block px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full text-primary-foreground/90 text-sm font-medium mb-4"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              🎨 Art & Engineering Contest 2026
+            </motion.span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4">
+              <span className="block">Design a</span>
+              <span className="text-accent">Campus Icon!</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
               Create a concept for an art installation on UAlberta's Greenspaces
@@ -36,8 +50,11 @@ const DesignContest = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 bg-gradient-subtle">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-20 px-4 bg-gradient-subtle relative">
+        <Particles count={10} className="opacity-30" />
+        <div className="container mx-auto max-w-5xl relative z-10">
+          
+          {/* About Section */}
           <AnimatedSection>
             <div className="bg-card rounded-lg shadow-card p-8 mb-12">
               <h2 className="text-4xl font-bold text-foreground mb-6">About the Contest</h2>
@@ -57,77 +74,165 @@ const DesignContest = () => {
             </div>
           </AnimatedSection>
 
-          {/* Key Features Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <AnimatedSection delay={0.1}>
-              <div className="bg-card rounded-lg shadow-card p-6 h-full">
-                <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="inline-block mb-4"
-                >
-                  <Trophy className="h-12 w-12 text-accent" />
-                </motion.div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Grand Prize</h3>
-                <p className="text-muted-foreground">
-                  The winning team will win a substantial cash prize and have their proposal fully engineered by a group of Civil Connect student members. It will then be proposed to the University Administration and the UASU Green Fund for funding of up to <strong>$10,000</strong>! The winning team will also get a chance to present at our Connect 2026: Sustainable Innovations Symposium!
-                </p>
+          {/* AI Warning */}
+          <AnimatedSection delay={0.1}>
+            <div className="bg-destructive/10 border-2 border-destructive/30 rounded-lg p-6 mb-12">
+              <div className="flex items-start gap-4">
+                <AlertTriangle className="h-8 w-8 text-destructive flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-destructive mb-2">Important: AI Usage Policy</h3>
+                  <p className="text-foreground">
+                    <strong>The use of AI for the design aspect of the art piece is strictly prohibited.</strong> 
+                    {" "}All design concepts must be original human-created work. Submissions found to use 
+                    AI-generated designs will be disqualified.
+                  </p>
+                </div>
               </div>
-            </AnimatedSection>
+            </div>
+          </AnimatedSection>
 
-            <AnimatedSection delay={0.2}>
-              <div className="bg-card rounded-lg shadow-card p-6 h-full">
-                <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="inline-block mb-4"
-                >
-                  <DollarSign className="h-12 w-12 text-accent" />
-                </motion.div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Runner-Up Prizes</h3>
-                <p className="text-muted-foreground">
-                  A prize pool of over <strong>$500</strong> is up for grabs for non-winning teams!
-                </p>
-              </div>
-            </AnimatedSection>
+          {/* Prize Mindmap Structure */}
+          <AnimatedSection delay={0.2}>
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Contest Rewards</h2>
+              <div className="relative">
+                {/* Center Grand Prize */}
+                <div className="flex justify-center mb-8">
+                  <motion.div 
+                    className="relative"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ type: "spring", duration: 0.8 }}
+                  >
+                    {/* Glowing background */}
+                    <div className="absolute inset-0 bg-accent/30 rounded-full blur-2xl scale-150" />
+                    <div className="relative bg-gradient-to-br from-accent to-accent/80 rounded-full p-8 md:p-12 text-center shadow-elevated">
+                      <Trophy className="h-12 w-12 md:h-16 md:w-16 text-accent-foreground mx-auto mb-3" />
+                      <div className="text-3xl md:text-4xl font-bold text-accent-foreground">$10,000</div>
+                      <div className="text-accent-foreground/90 font-medium">Grand Prize Funding</div>
+                    </div>
+                  </motion.div>
+                </div>
 
-            <AnimatedSection delay={0.3}>
-              <div className="bg-card rounded-lg shadow-card p-6 h-full">
-                <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="inline-block mb-4"
-                >
-                  <Users className="h-12 w-12 text-accent" />
-                </motion.div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Team Size</h3>
-                <p className="text-muted-foreground">
-                  Teams of up to <strong>6 members</strong> can participate. 
-                  Multidisciplinary teams encouraged!
-                </p>
-              </div>
-            </AnimatedSection>
+                {/* Connecting lines - visual only on larger screens */}
+                <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
-            <AnimatedSection delay={0.4}>
-              <div className="bg-card rounded-lg shadow-card p-6 h-full">
-                <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="inline-block mb-4"
-                >
-                  <Palette className="h-12 w-12 text-accent" />
-                </motion.div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Professional Development</h3>
-                <p className="text-muted-foreground">
-                  Winning design will be fully designed and costed by a Civil Connect engineering team, 
-                  then showcased at our Connect 2026: Sustainable Innovation Symposium.
-                </p>
+                {/* Four elements around */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="bg-card rounded-lg shadow-card p-6 text-center border-2 border-transparent hover:border-accent transition-colors"
+                  >
+                    <motion.div
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="inline-block mb-4"
+                    >
+                      <Trophy className="h-10 w-10 text-accent mx-auto" />
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Grand Prize</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Winning team receives a cash prize and their design will be fully engineered by Civil Connect members, then proposed to University Administration and UASU Green Fund.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="bg-card rounded-lg shadow-card p-6 text-center border-2 border-transparent hover:border-accent transition-colors"
+                  >
+                    <motion.div
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="inline-block mb-4"
+                    >
+                      <DollarSign className="h-10 w-10 text-accent mx-auto" />
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Runner-Up Prizes</h3>
+                    <p className="text-muted-foreground text-sm">
+                      A prize pool of over <strong>$500</strong> is up for grabs for non-winning teams!
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="bg-card rounded-lg shadow-card p-6 text-center border-2 border-transparent hover:border-accent transition-colors"
+                  >
+                    <motion.div
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="inline-block mb-4"
+                    >
+                      <Users className="h-10 w-10 text-accent mx-auto" />
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Team Size</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Teams of up to <strong>6 members</strong>. Open exclusively to undergraduate and graduate students. Multidisciplinary teams encouraged!
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="bg-card rounded-lg shadow-card p-6 text-center border-2 border-transparent hover:border-accent transition-colors"
+                  >
+                    <motion.div
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="inline-block mb-4"
+                    >
+                      <Palette className="h-10 w-10 text-accent mx-auto" />
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Leave a Legacy</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Winning design will be fully designed and costed by a Civil Connect engineering team, then showcased at our Connect 2026 Symposium.
+                    </p>
+                  </motion.div>
+                </div>
               </div>
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Contest Poster Section */}
+          <AnimatedSection delay={0.3}>
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Contest Poster</h2>
+              <div className="relative max-w-2xl mx-auto">
+                {/* Decorative frame */}
+                <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 via-primary/10 to-accent/20 rounded-2xl blur-xl" />
+                <motion.div
+                  className="relative"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="relative overflow-hidden rounded-xl shadow-elevated border-4 border-accent/30">
+                    {/* Corner decorations */}
+                    <div className="absolute top-0 left-0 w-16 h-16 border-l-4 border-t-4 border-accent rounded-tl-xl" />
+                    <div className="absolute top-0 right-0 w-16 h-16 border-r-4 border-t-4 border-accent rounded-tr-xl" />
+                    <div className="absolute bottom-0 left-0 w-16 h-16 border-l-4 border-b-4 border-accent rounded-bl-xl" />
+                    <div className="absolute bottom-0 right-0 w-16 h-16 border-r-4 border-b-4 border-accent rounded-br-xl" />
+                    
+                    <img 
+                      src={contestPoster} 
+                      alt="Design a Campus Icon - Art & Engineering Contest Poster" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </AnimatedSection>
 
           {/* Timeline */}
-          <AnimatedSection delay={0.5}>
+          <AnimatedSection delay={0.4}>
             <div className="bg-card rounded-lg shadow-card p-8 mb-12">
               <div className="flex items-center gap-3 mb-6">
                 <Calendar className="h-8 w-8 text-accent" />
@@ -147,7 +252,7 @@ const DesignContest = () => {
           </AnimatedSection>
 
           {/* CTA Section */}
-          <AnimatedSection delay={0.6}>
+          <AnimatedSection delay={0.5}>
             <div className="relative overflow-hidden rounded-2xl shadow-elevated">
               {/* Animated gradient background */}
               <motion.div 
@@ -250,7 +355,7 @@ const DesignContest = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   <a 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdnSRo6-H_oZ0EyfqPBRpFt7tRtu3xDzHXVSaHEqfJ8JWWRtQ/viewform" 
+                    href="https://docs.google.com/document/d/1eAQe428YcAZ1dCgZifqh1YX10gcT-hns7hrhm_yJCzY/edit?tab=t.0#heading=h.lnnta5brshv9" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-block"
@@ -258,7 +363,7 @@ const DesignContest = () => {
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                       <Button
                         size="lg"
-                        className="bg-background text-primary hover:bg-background/95 font-bold text-lg px-10 py-7 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                        className="bg-background text-primary hover:bg-background/95 font-bold text-lg px-10 py-7 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 min-w-[200px]"
                       >
                         <span className="mr-2">✨</span>
                         Register Here
@@ -276,9 +381,9 @@ const DesignContest = () => {
                       <Button
                         size="lg"
                         variant="outline"
-                        className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-10 py-7 rounded-xl transition-all duration-300"
+                        className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-10 py-7 rounded-xl transition-all duration-300 min-w-[200px]"
                       >
-                        More Info About Contest
+                        More Info
                         <ExternalLink className="ml-2 h-5 w-5" />
                       </Button>
                     </motion.div>
