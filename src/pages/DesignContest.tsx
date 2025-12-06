@@ -355,7 +355,7 @@ const DesignContest = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   <a 
-                    href="https://docs.google.com/document/d/1eAQe428YcAZ1dCgZifqh1YX10gcT-hns7hrhm_yJCzY/edit?tab=t.0#heading=h.lnnta5brshv9" 
+                    href="https://hellowestdistrict.com/art-contest/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-block"
@@ -372,7 +372,7 @@ const DesignContest = () => {
                     </motion.div>
                   </a>
                   <a 
-                    href="https://hellowestdistrict.com/art-contest/" 
+                    href="https://docs.google.com/document/d/1eAQe428YcAZ1dCgZifqh1YX10gcT-hns7hrhm_yJCzY/edit?tab=t.0#heading=h.lnnta5brshv9" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-block"
