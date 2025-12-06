@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import Particles from "@/components/Particles";
+import CountdownTimer from "@/components/CountdownTimer";
 import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy, AlertTriangle } from "lucide-react";
 import heroImage from "@/assets/hero-ualberta.png";
 import contestPoster from "@/assets/contest-poster.png";
@@ -338,6 +339,16 @@ const DesignContest = () => {
                 >
                   Registration opens <strong className="text-accent">December 1st, 2025</strong>
                 </motion.p>
+
+                {/* Countdown Timer */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.25 }}
+                  className="my-8"
+                >
+                  <CountdownTimer targetDate={new Date("2025-12-01T00:00:00")} />
+                </motion.div>
                 
                 <motion.p 
                   className="text-lg text-primary-foreground/70 mb-10 max-w-xl mx-auto"
