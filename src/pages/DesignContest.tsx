@@ -51,20 +51,54 @@ const DesignContest = () => {
       </section>
 
       {/* Registration Deadline Banner */}
-      <section className="bg-accent py-6 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-center gap-2 mb-3">
-              <Calendar className="h-5 w-5 text-accent-foreground" />
-              <span className="text-accent-foreground font-semibold uppercase tracking-wider text-sm">
-                Registration Deadline
+      <section className="relative bg-gradient-to-r from-accent via-accent to-accent/90 py-10 px-4 overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div 
+            className="absolute -top-20 -left-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl"
+            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          />
+          <motion.div 
+            className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
+            animate={{ scale: [1.2, 1, 1.2], opacity: [0.5, 0.3, 0.5] }}
+            transition={{ duration: 5, repeat: Infinity }}
+          />
+        </div>
+        
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <motion.div 
+            className="flex flex-col items-center text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div 
+              className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <motion.div
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <Calendar className="h-4 w-4 text-accent-foreground" />
+              </motion.div>
+              <span className="text-accent-foreground font-bold uppercase tracking-[0.15em] text-xs">
+                Time Remaining
               </span>
-            </div>
-            <p className="text-accent-foreground/90 mb-4 text-lg">
-              Team registration closes <strong>December 19th, 2025</strong> — Don't miss your chance!
+            </motion.div>
+            
+            <h3 className="text-2xl sm:text-3xl font-bold text-accent-foreground mb-2">
+              Registration Closes Soon!
+            </h3>
+            <p className="text-accent-foreground/80 mb-8 text-base sm:text-lg max-w-md">
+              Secure your team's spot before <strong className="text-accent-foreground">December 19th, 2025</strong>
             </p>
+            
             <CountdownTimer targetDate={new Date("2025-12-19T23:59:59")} />
-          </div>
+          </motion.div>
         </div>
       </section>
 
