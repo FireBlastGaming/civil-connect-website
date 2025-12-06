@@ -355,8 +355,8 @@ const DesignContest = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   <a 
-                    href="https://hellowestdistrict.com/art-contest/" 
-                    target="_blank" 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdnSRo6-H_oZ0EyfqPBRpFt7tRtu3xDzHXVSaHEqfJ8JWWRtQ/viewform" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"
                   >
