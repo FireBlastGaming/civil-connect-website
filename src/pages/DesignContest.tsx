@@ -50,6 +50,24 @@ const DesignContest = () => {
         </div>
       </section>
 
+      {/* Registration Deadline Banner */}
+      <section className="bg-accent py-6 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="flex flex-col items-center text-center">
+            <div className="flex items-center gap-2 mb-3">
+              <Calendar className="h-5 w-5 text-accent-foreground" />
+              <span className="text-accent-foreground font-semibold uppercase tracking-wider text-sm">
+                Registration Deadline
+              </span>
+            </div>
+            <p className="text-accent-foreground/90 mb-4 text-lg">
+              Team registration closes <strong>December 19th, 2025</strong> — Don't miss your chance!
+            </p>
+            <CountdownTimer targetDate={new Date("2025-12-19T23:59:59")} />
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <section className="py-20 px-4 bg-gradient-subtle relative">
         <Particles count={10} className="opacity-30" />
@@ -340,15 +358,6 @@ const DesignContest = () => {
                   Registration opens <strong className="text-accent">December 1st, 2025</strong>
                 </motion.p>
 
-                {/* Countdown Timer */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.25 }}
-                  className="my-8"
-                >
-                  <CountdownTimer targetDate={new Date("2025-12-01T00:00:00")} />
-                </motion.div>
                 
                 <motion.p 
                   className="text-lg text-primary-foreground/70 mb-10 max-w-xl mx-auto"

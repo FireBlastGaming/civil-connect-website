@@ -51,8 +51,8 @@ const CountdownTimer = ({ targetDate, className = "" }: CountdownTimerProps) => 
       <div className={`flex gap-3 sm:gap-4 justify-center ${className}`}>
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex flex-col items-center">
-            <div className="bg-background/20 backdrop-blur-sm rounded-xl p-3 sm:p-4 min-w-[70px] sm:min-w-[85px]">
-              <div className="h-8 sm:h-10" />
+            <div className="bg-primary/30 backdrop-blur-sm rounded-xl p-3 sm:p-4 min-w-[60px] sm:min-w-[75px]">
+              <div className="h-6 sm:h-8" />
             </div>
             <div className="h-4 mt-2" />
           </div>
@@ -74,25 +74,19 @@ const CountdownTimer = ({ targetDate, className = "" }: CountdownTimerProps) => 
         <motion.div
           key={unit.label}
           className="flex flex-col items-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          transition={{ duration: 0.4, delay: index * 0.05 }}
         >
-          <div className="relative bg-background/20 backdrop-blur-sm rounded-xl p-3 sm:p-4 min-w-[70px] sm:min-w-[85px] border border-primary-foreground/20 shadow-lg overflow-hidden">
-            {/* Subtle shimmer effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-foreground/5 to-transparent -translate-x-full animate-[shimmer_3s_infinite]" />
-            
+          <div className="relative bg-primary/30 backdrop-blur-sm rounded-xl p-3 sm:p-4 min-w-[60px] sm:min-w-[75px] border border-primary/20 shadow-md overflow-hidden">
             <motion.span
               key={unit.value}
-              className="relative block text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground text-center tabular-nums"
-              initial={{ opacity: 0.8 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
+              className="relative block text-xl sm:text-2xl md:text-3xl font-bold text-accent-foreground text-center tabular-nums"
             >
               {String(unit.value).padStart(2, "0")}
             </motion.span>
           </div>
-          <span className="text-xs sm:text-sm text-primary-foreground/70 mt-2 font-medium uppercase tracking-wider">
+          <span className="text-xs sm:text-sm text-accent-foreground/80 mt-2 font-medium uppercase tracking-wider">
             {unit.label}
           </span>
         </motion.div>
