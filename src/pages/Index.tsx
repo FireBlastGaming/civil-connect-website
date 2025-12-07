@@ -105,7 +105,7 @@ const Index = () => {
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
                     Create a concept for an art installation on UAlberta's Greenspaces! 
-                    Teams of up to 6 undergraduate & graduate students can win <strong>$10,000</strong> in funding. 
+                    Teams of up to 6 undergraduate & graduate students can win a <strong>$500 cash prize</strong>. 
                     Registration closes <strong>December 19th, 2025</strong>.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -152,9 +152,9 @@ const Index = () => {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <StatCard icon={Rocket} value="50+" label="Projects Completed" delay={0.1} />
-            <StatCard icon={Users} value="200+" label="Students Involved" delay={0.2} />
-            <StatCard icon={Target} value="30+" label="Community Partners" delay={0.3} />
+            <StatCard icon={Rocket} value="4" label="Ongoing Projects" delay={0.1} />
+            <StatCard icon={Users} value="70+" label="Active Members" delay={0.2} />
+            <StatCard icon={Target} value="10+" label="Partners" delay={0.3} />
           </div>
         </div>
       </section>

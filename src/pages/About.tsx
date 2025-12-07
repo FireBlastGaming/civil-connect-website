@@ -207,12 +207,11 @@ const About = () => {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { value: "50+", label: "Projects Delivered" },
-              { value: "200+", label: "Student Members" },
-              { value: "30+", label: "Community Partners" },
-              { value: "5000+", label: "Community Members Impacted" },
+              { value: "4", label: "Ongoing Projects" },
+              { value: "70+", label: "Active Members" },
+              { value: "10+", label: "Partners" },
             ].map((stat, index) => (
               <AnimatedSection key={stat.label} delay={index * 0.1}>
                 <div className="text-center">

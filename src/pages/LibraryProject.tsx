@@ -75,8 +75,8 @@ const LibraryProject = () => {
             <AnimatedSection delay={0.1}>
               <Card className="p-6 border-2 hover:border-primary transition-all">
                 <Calendar className="h-10 w-10 text-accent mb-3" />
-                <h3 className="text-lg font-semibold text-primary mb-2">Duration</h3>
-                <p className="text-muted-foreground">15 months (In Progress)</p>
+                <h3 className="text-lg font-semibold text-primary mb-2">Status</h3>
+                <p className="text-muted-foreground">In Progress</p>
               </Card>
             </AnimatedSection>
 
@@ -84,7 +84,7 @@ const LibraryProject = () => {
               <Card className="p-6 border-2 hover:border-primary transition-all">
                 <Users className="h-10 w-10 text-accent mb-3" />
                 <h3 className="text-lg font-semibold text-primary mb-2">Team Size</h3>
-                <p className="text-muted-foreground">18 student contributors</p>
+                <p className="text-muted-foreground">~10 student contributors</p>
               </Card>
             </AnimatedSection>
 
