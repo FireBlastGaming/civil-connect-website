@@ -151,18 +151,21 @@ const NeighbourhoodProject = () => {
         </div>
       </section>
 
-      {/* Impact & Results */}
+      {/* Goals & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-6">Impact & Progress</h2>
+            <h2 className="text-4xl font-bold text-primary mb-6">Our Vision</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              What we're aiming to achieve with this neighbourhood design
+            </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {[
               { value: "5000+", label: "Residents to be Served" },
-              { value: "40%", label: "Reduction in Car Trips" },
-              { value: "15", label: "Parks & Green Spaces" },
+              { value: "40%", label: "Target Car Trip Reduction" },
+              { value: "15+", label: "Parks & Green Spaces Planned" },
               { value: "100%", label: "Transit Accessible" },
             ].map((stat, index) => (
               <AnimatedSection key={stat.label} delay={index * 0.1}>
