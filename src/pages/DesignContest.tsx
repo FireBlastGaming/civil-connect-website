@@ -161,8 +161,8 @@ const DesignContest = () => {
                     <div className="absolute inset-0 bg-accent/30 rounded-full blur-2xl scale-150" />
                     <div className="relative bg-gradient-to-br from-accent to-accent/80 rounded-full p-8 md:p-12 text-center shadow-elevated">
                       <Trophy className="h-12 w-12 md:h-16 md:w-16 text-accent-foreground mx-auto mb-3" />
-                      <div className="text-3xl md:text-4xl font-bold text-accent-foreground">$10,000</div>
-                      <div className="text-accent-foreground/90 font-medium">Grand Prize Funding</div>
+                      <div className="text-3xl md:text-4xl font-bold text-accent-foreground">$500</div>
+                      <div className="text-accent-foreground/90 font-medium">Cash Prize</div>
                     </div>
                   </motion.div>
                 </div>
@@ -187,7 +187,7 @@ const DesignContest = () => {
                     </motion.div>
                     <h3 className="text-xl font-bold text-foreground mb-2">Grand Prize</h3>
                     <p className="text-muted-foreground text-sm">
-                      Winning team receives a cash prize and their design will be fully engineered by Civil Connect members, then proposed to University Administration and UASU Green Fund.
+                      Winning team receives a <strong>$500 cash prize</strong> and their design will be fully engineered by Civil Connect members, then proposed to University Administration for a chance at up to $10,000 in funding.
                     </p>
                   </motion.div>
 
@@ -426,7 +426,7 @@ const DesignContest = () => {
                     </motion.div>
                   </a>
                   <a 
-                    href="https://docs.google.com/document/d/1eAQe428YcAZ1dCgZifqh1YX10gcT-hns7hrhm_yJCzY/edit?tab=t.0#heading=h.lnnta5brshv9" 
+                    href="https://drive.google.com/file/d/1c59AoqISMyFDHpNfi79u7I6xdS-QcaNo/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-block"
@@ -437,7 +437,7 @@ const DesignContest = () => {
                         variant="outline"
                         className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-10 py-7 rounded-xl transition-all duration-300 min-w-[200px]"
                       >
-                        More Info
+                        Contest Guidebook
                         <ExternalLink className="ml-2 h-5 w-5" />
                       </Button>
                     </motion.div>
