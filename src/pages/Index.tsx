@@ -106,7 +106,7 @@ const Index = () => {
                   <p className="text-lg text-muted-foreground mb-6">
                     Create a concept for an art installation on UAlberta's Greenspaces! 
                     Teams of up to 6 undergraduate & graduate students can win a <strong>$500 cash prize</strong>. 
-                    Registration closes <strong>December 19th, 2025</strong>.
+                    Registration closes <strong>January 16th, 2026</strong>.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <Link to="/design-contest">
