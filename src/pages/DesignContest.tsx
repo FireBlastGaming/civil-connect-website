@@ -94,10 +94,10 @@ const DesignContest = () => {
               Registration Closes Soon!
             </h3>
             <p className="text-accent-foreground/80 mb-8 text-base sm:text-lg max-w-md">
-              Secure your team's spot before <strong className="text-accent-foreground">December 19th, 2025</strong>
+              Secure your team's spot before <strong className="text-accent-foreground">January 16th, 2026</strong>
             </p>
             
-            <CountdownTimer targetDate={new Date("2025-12-19T23:59:59")} />
+            <CountdownTimer targetDate={new Date("2026-01-16T23:59:59")} />
           </motion.div>
         </div>
       </section>
@@ -118,7 +118,7 @@ const DesignContest = () => {
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 A judging panel comprising of community leaders, industry professionals, and professors 
-                will review the submissions at an event on <strong>January 23rd, 2026</strong>.
+                will review the submissions at an event on <strong>February 6th, 2026</strong>.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 <strong>No engineering knowledge is required</strong> - this is a multidisciplinary contest, 
@@ -294,11 +294,11 @@ const DesignContest = () => {
               <div className="space-y-4">
                 <div className="border-l-4 border-accent pl-4 py-2">
                   <h3 className="text-xl font-semibold text-foreground">Team Registration</h3>
-                  <p className="text-muted-foreground">December 1-19th, 2025</p>
+                  <p className="text-muted-foreground">December 1st, 2025 - January 16th, 2026</p>
                 </div>
                 <div className="border-l-4 border-primary pl-4 py-2">
                   <h3 className="text-xl font-semibold text-foreground">Judging Event</h3>
-                  <p className="text-muted-foreground">January 23rd, 2026</p>
+                  <p className="text-muted-foreground">February 6th, 2026</p>
                 </div>
               </div>
             </div>
