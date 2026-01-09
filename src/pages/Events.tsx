@@ -20,7 +20,7 @@ const eventsData: Event[] = [
   {
     id: "1",
     title: "Design Contest Judging Event",
-    date: new Date("2026-01-23"),
+    date: new Date("2026-02-06"),
     time: "5:00 PM - 8:00 PM",
     location: "University of Alberta",
     description: "Join us for the Design a Campus Icon contest judging event where teams will present their art installation concepts.",
