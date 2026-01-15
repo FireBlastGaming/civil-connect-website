@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import Particles from "@/components/Particles";
 import CountdownTimer from "@/components/CountdownTimer";
-import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy, AlertTriangle, Heart } from "lucide-react";
+import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy, AlertTriangle } from "lucide-react";
 import heroImage from "@/assets/hero-ualberta.png";
 import contestPoster from "@/assets/contest-poster.png";
 import eacLogo from "@/assets/edmonton-arts-council-logo.png";
@@ -309,7 +309,7 @@ const DesignContest = () => {
           <AnimatedSection delay={0.45}>
             <div className="mb-12">
               <motion.div
-                className="relative bg-card rounded-2xl shadow-card p-8 md:p-12 border-2 border-accent/20 overflow-hidden"
+                className="relative bg-card rounded-2xl shadow-card p-10 md:p-14 border-2 border-accent/20 overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -328,68 +328,55 @@ const DesignContest = () => {
                   />
                 </div>
 
-                <div className="relative z-10 text-center">
-                  {/* Header with heart icon */}
-                  <motion.div 
-                    className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-accent/10 rounded-full"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.2 }}
-                  >
-                    <motion.div
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                    >
-                      <Heart className="h-4 w-4 text-accent fill-accent" />
-                    </motion.div>
-                    <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                      Proudly Sponsored By
-                    </span>
-                    <motion.div
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.75 }}
-                    >
-                      <Heart className="h-4 w-4 text-accent fill-accent" />
-                    </motion.div>
-                  </motion.div>
-
-                  {/* Logo with elegant animation */}
-                  <motion.div
-                    className="relative inline-block"
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  {/* Title as main heading */}
+                  <motion.h2 
+                    className="text-2xl md:text-3xl font-bold text-foreground mb-8"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    Proudly Sponsored By
+                  </motion.h2>
+
+                  {/* Decorative line */}
+                  <motion.div 
+                    className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mb-8"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
                     transition={{ delay: 0.3, duration: 0.6 }}
-                    whileHover={{ scale: 1.05 }}
+                  />
+
+                  {/* Logo centered with elegant animation */}
+                  <motion.div
+                    className="relative"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
                   >
                     {/* Subtle glow behind logo */}
                     <motion.div 
-                      className="absolute inset-0 bg-accent/10 rounded-2xl blur-xl scale-110"
+                      className="absolute inset-0 bg-accent/10 rounded-2xl blur-2xl scale-125"
                       animate={{ opacity: [0.3, 0.6, 0.3] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     />
-                    <a 
-                      href="https://www.edmontonartscouncil.ca/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="relative block"
-                    >
-                      <motion.img 
-                        src={eacLogo} 
-                        alt="Edmonton Arts Council" 
-                        className="h-20 md:h-28 w-auto mx-auto relative z-10 transition-all duration-300"
-                        whileHover={{ filter: "brightness(1.1)" }}
-                      />
-                    </a>
+                    <motion.img 
+                      src={eacLogo} 
+                      alt="Edmonton Arts Council" 
+                      className="h-24 md:h-32 w-auto relative z-10"
+                      animate={{ scale: [1, 1.02, 1] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    />
                   </motion.div>
 
                   {/* Thank you message */}
                   <motion.p
-                    className="mt-6 text-muted-foreground max-w-md mx-auto"
+                    className="mt-8 text-muted-foreground text-lg max-w-lg"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
+                    transition={{ delay: 0.6 }}
                   >
-                    Thank you to the Edmonton Arts Council for their generous support in making this contest possible.
+                    Thank you to the <strong className="text-foreground">Edmonton Arts Council</strong> for their generous support in making this contest possible.
                   </motion.p>
                 </div>
               </motion.div>
