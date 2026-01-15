@@ -6,6 +6,7 @@ import CountdownTimer from "@/components/CountdownTimer";
 import { Award, Calendar, DollarSign, Users, ExternalLink, Palette, Trophy, AlertTriangle } from "lucide-react";
 import heroImage from "@/assets/hero-ualberta.png";
 import contestPoster from "@/assets/contest-poster.png";
+import eacLogo from "@/assets/edmonton-arts-council-logo.png";
 
 const DesignContest = () => {
   return (
@@ -301,6 +302,84 @@ const DesignContest = () => {
                   <p className="text-muted-foreground">February 6th, 2026</p>
                 </div>
               </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Sponsor Section */}
+          <AnimatedSection delay={0.45}>
+            <div className="mb-12">
+              <motion.div
+                className="relative bg-card rounded-2xl shadow-card p-10 md:p-14 border-2 border-accent/20 overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                {/* Background decorative elements */}
+                <div className="absolute inset-0 overflow-hidden">
+                  <motion.div 
+                    className="absolute -top-20 -right-20 w-60 h-60 bg-accent/5 rounded-full blur-3xl"
+                    animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <motion.div 
+                    className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-2xl"
+                    animate={{ scale: [1.2, 1, 1.2], opacity: [0.5, 0.3, 0.5] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </div>
+
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  {/* Title as main heading */}
+                  <motion.h2 
+                    className="text-2xl md:text-3xl font-bold text-foreground mb-8"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    Proudly Sponsored By
+                  </motion.h2>
+
+                  {/* Decorative line */}
+                  <motion.div 
+                    className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mb-8"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ delay: 0.3, duration: 0.6 }}
+                  />
+
+                  {/* Logo centered with elegant animation */}
+                  <motion.div
+                    className="relative"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                  >
+                    {/* Subtle glow behind logo */}
+                    <motion.div 
+                      className="absolute inset-0 bg-accent/10 rounded-2xl blur-2xl scale-125"
+                      animate={{ opacity: [0.3, 0.6, 0.3] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                    <motion.img 
+                      src={eacLogo} 
+                      alt="Edmonton Arts Council" 
+                      className="h-24 md:h-32 w-auto relative z-10"
+                      animate={{ scale: [1, 1.02, 1] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                  </motion.div>
+
+                  {/* Thank you message */}
+                  <motion.p
+                    className="mt-8 text-muted-foreground text-lg max-w-lg"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    Thank you to the <strong className="text-foreground">Edmonton Arts Council</strong> for their generous support in making this contest possible.
+                  </motion.p>
+                </div>
+              </motion.div>
             </div>
           </AnimatedSection>
 
