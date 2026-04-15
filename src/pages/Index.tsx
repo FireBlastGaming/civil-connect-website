@@ -6,11 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowDown, Users, Target, Lightbulb, CheckCircle2, Rocket, ArrowRight } from "lucide-react";
+import { Users, Target, Lightbulb, CheckCircle2, Rocket, ArrowRight, Award, Trophy, Leaf, Mail, Handshake } from "lucide-react";
 import heroHome from "@/assets/hero-home.jpg";
 import neighbourhoodProject from "@/assets/neighbourhood-project.jpg";
 import napRoomProject from "@/assets/nap-room-project.jpg";
 import libraryProject from "@/assets/library-project.jpg";
+import climateAwardLogo from "@/assets/climate-award-logo.jpg";
+import pivotGreenLogo from "@/assets/pivot-green-logo.png";
+import smallChangeFundLogo from "@/assets/small-change-fund-logo.png";
 
 const Index = () => {
   return (
@@ -28,7 +31,6 @@ const Index = () => {
         </div>
         <Particles count={30} />
 
-        {/* Floating Shapes */}
         <motion.div
           className="absolute top-20 left-10 w-20 h-20 bg-accent/20 rounded-full blur-xl"
           animate={{ y: [0, 30, 0], scale: [1, 1.2, 1] }}
@@ -75,58 +77,184 @@ const Index = () => {
               </Link>
             </div>
           </motion.div>
-
         </div>
       </section>
 
-      {/* Design Contest Announcement */}
-      <section className="py-16 bg-gradient-to-r from-accent via-primary to-accent relative overflow-hidden">
+      {/* 🏆 Award Recognition Announcement */}
+      <section className="py-20 relative overflow-hidden bg-gradient-to-b from-primary via-primary/95 to-primary">
+        {/* Animated background elements */}
         <motion.div
-          className="absolute top-0 left-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl"
-          animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
-          transition={{ duration: 10, repeat: Infinity }}
+          className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+          animate={{ x: [0, 80, 0], y: [0, 40, 0] }}
+          transition={{ duration: 12, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl"
-          animate={{ x: [0, -100, 0], y: [0, -50, 0] }}
-          transition={{ duration: 10, repeat: Infinity }}
+          className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+          animate={{ x: [0, -80, 0], y: [0, -40, 0] }}
+          transition={{ duration: 12, repeat: Infinity }}
         />
+        {/* Floating leaf particles */}
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute text-accent/20"
+            style={{ left: `${15 + i * 15}%`, top: `${10 + (i % 3) * 30}%` }}
+            animate={{
+              y: [0, -20, 0],
+              rotate: [0, 15, -15, 0],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{ duration: 4 + i, repeat: Infinity, delay: i * 0.5 }}
+          >
+            <Leaf className="h-8 w-8" />
+          </motion.div>
+        ))}
         
+        <Particles count={15} />
+
         <div className="relative z-10 container mx-auto px-4">
           <AnimatedSection>
-            <Card className="p-8 md:p-12 bg-background/95 backdrop-blur border-2 border-accent shadow-elevated">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-1 text-center md:text-left">
-                  <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold text-sm mb-4">
-                    🎨 NEW CONTEST
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                    Design a Campus Icon!
-                  </h3>
-                  <p className="text-lg text-muted-foreground mb-6">
-                    Create a concept for an art installation on UAlberta's Greenspaces! 
-                    Teams of up to 6 undergraduate & graduate students can win a <strong>$500 cash prize</strong>. 
-                    Registration closes <strong>January 16th, 2026</strong>.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <Link to="/design-contest">
-                      <Button
-                        size="lg"
-                        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </Link>
+            <div className="text-center mb-10">
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+                viewport={{ once: true }}
+                className="inline-block mb-6"
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-accent/30 rounded-full blur-xl animate-pulse" />
+                  <div className="relative p-6 bg-gradient-to-br from-accent to-accent/80 rounded-full">
+                    <Trophy className="h-16 w-16 text-accent-foreground" />
                   </div>
                 </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="inline-block bg-accent/20 text-accent px-6 py-2 rounded-full font-bold text-sm mb-6 border border-accent/30">
+                  🏆 AWARD-WINNING ORGANIZATION
+                </div>
+              </motion.div>
+
+              <motion.h2
+                className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                Canadian Youth Climate Action Award
+              </motion.h2>
+              
+              <motion.div
+                className="flex items-center justify-center gap-3 mb-6"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Award className="h-6 w-6 text-accent" />
+                <span className="text-2xl md:text-3xl font-bold text-accent">
+                  Runner-Up — $3,500 Prize
+                </span>
+                <Award className="h-6 w-6 text-accent" />
+              </motion.div>
+
+              <motion.p
+                className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                Civil Connect has been recognized by <strong className="text-accent">Pivot Green</strong> and the{" "}
+                <strong className="text-accent">Small Change Fund</strong> for our inspiring efforts and positive impact 
+                in the fight against climate change.
+              </motion.p>
+
+              <motion.p
+                className="text-base text-primary-foreground/70 max-w-2xl mx-auto"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+              >
+                Our work in designing climate-conscious infrastructure and challenging traditional suburban development patterns
+                through transit-oriented, walkable, and sustainable neighbourhood planning earned us this national recognition.
+              </motion.p>
+            </div>
+          </AnimatedSection>
+
+          {/* Award Logo & Partner Logos */}
+          <AnimatedSection delay={0.3}>
+            <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-background/95 backdrop-blur border-2 border-accent/30 shadow-elevated">
+              {/* Main Award Logo */}
+              <motion.div
+                className="flex justify-center mb-8"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="relative">
+                  <motion.div
+                    className="absolute inset-0 bg-accent/20 rounded-2xl blur-xl"
+                    animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  />
+                  <img
+                    src={climateAwardLogo}
+                    alt="Canadian Youth Climate Action Award"
+                    className="relative h-40 md:h-52 w-auto object-contain"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Decorative Divider */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+                <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">In Partnership With</span>
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+              </div>
+
+              {/* Partner Logos */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
                 <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="hidden md:block"
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="group"
                 >
-                  <div className="p-8 bg-primary rounded-full">
-                    <Lightbulb className="h-24 w-24 text-primary-foreground" />
+                  <div className="relative">
+                    <motion.div
+                      className="absolute inset-0 bg-accent/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100"
+                      transition={{ duration: 0.3 }}
+                    />
+                    <img
+                      src={pivotGreenLogo}
+                      alt="Pivot Green"
+                      className="relative h-16 md:h-20 w-auto object-contain"
+                    />
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="group"
+                >
+                  <div className="relative">
+                    <motion.div
+                      className="absolute inset-0 bg-accent/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100"
+                      transition={{ duration: 0.3 }}
+                    />
+                    <img
+                      src={smallChangeFundLogo}
+                      alt="Small Change Fund"
+                      className="relative h-12 md:h-16 w-auto object-contain"
+                    />
                   </div>
                 </motion.div>
               </div>
@@ -305,6 +433,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Partner With Us Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <Card className="max-w-3xl mx-auto p-8 md:p-12 border-2 border-accent/30 text-center">
+              <motion.div
+                className="inline-block mb-6"
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="p-5 bg-gradient-to-br from-accent to-accent/80 rounded-full">
+                  <Handshake className="h-12 w-12 text-accent-foreground" />
+                </div>
+              </motion.div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                Want to Partner With Us?
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6 max-w-xl mx-auto">
+                We're always looking for community partners, organizations, and landowners 
+                who want to collaborate on impactful projects.
+              </p>
+              <motion.a
+                href="mailto:gen.civil.connect@gmail.com"
+                className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-4 rounded-md shadow-elevated hover:shadow-glow transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Mail className="h-5 w-5" />
+                gen.civil.connect@gmail.com
+              </motion.a>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary" />
@@ -329,14 +492,24 @@ const Index = () => {
               Join Civil Connect Edmonton today and start working on projects that matter.
               Gain real-world experience, build your network, and create lasting change.
             </p>
-            <Link to="/get-involved">
-              <Button
-                size="lg"
-                className="text-lg px-10 py-6 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/get-involved">
+                <Button
+                  size="lg"
+                  className="text-lg px-10 py-6 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105"
+                >
+                  Get Involved Today
+                </Button>
+              </Link>
+              <motion.a
+                href="mailto:gen.civil.connect@gmail.com"
+                className="inline-flex items-center gap-2 text-lg px-10 py-6 rounded-md border-2 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-semibold transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
               >
-                Get Involved Today
-              </Button>
-            </Link>
+                <Mail className="h-5 w-5" />
+                Partner With Us
+              </motion.a>
+            </div>
           </AnimatedSection>
         </div>
       </section>
