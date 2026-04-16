@@ -433,40 +433,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Partner With Us Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <AnimatedSection>
-            <Card className="max-w-3xl mx-auto p-8 md:p-12 border-2 border-accent/30 text-center">
-              <motion.div
-                className="inline-block mb-6"
-                animate={{ scale: [1, 1.08, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="p-5 bg-gradient-to-br from-accent to-accent/80 rounded-full">
-                  <Handshake className="h-12 w-12 text-accent-foreground" />
-                </div>
-              </motion.div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Want to Partner With Us?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6 max-w-xl mx-auto">
-                We're always looking for community partners, organizations, and landowners 
-                who want to collaborate on impactful projects.
-              </p>
-              <motion.a
-                href="mailto:gen.civil.connect@gmail.com"
-                className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-4 rounded-md shadow-elevated hover:shadow-glow transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Mail className="h-5 w-5" />
-                gen.civil.connect@gmail.com
-              </motion.a>
-            </Card>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* Call to Action Section */}
 
       {/* Call to Action Section */}
       <section className="py-20 relative overflow-hidden">
