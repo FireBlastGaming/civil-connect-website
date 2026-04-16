@@ -470,7 +470,7 @@ const Index = () => {
               </Link>
               <motion.a
                 href="mailto:gen.civil.connect@gmail.com"
-                className="inline-flex items-center gap-2 text-lg px-10 py-6 rounded-md border-2 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-semibold transition-all duration-300"
+                className="inline-flex items-center gap-2 text-lg px-10 py-6 rounded-md border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
                 <Mail className="h-5 w-5" />
