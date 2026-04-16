@@ -155,34 +155,42 @@ const GetInvolved = () => {
       </section>
 
       {/* Partner With Us CTA */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <motion.div
-              className="inline-block mb-6"
-              animate={{ scale: [1, 1.08, 1] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="p-5 bg-accent rounded-full">
-                <Handshake className="h-10 w-10 text-accent-foreground" />
-              </div>
-            </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Want to Partner With Us?
-            </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-              Are you an organization, landowner, or community group looking to bring a project to life? 
-              Let's work together to create something impactful.
-            </p>
-            <motion.a
-              href="mailto:gen.civil.connect@gmail.com"
-              className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-4 rounded-md shadow-elevated hover:shadow-glow transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Mail className="h-5 w-5" />
-              gen.civil.connect@gmail.com
-            </motion.a>
+          <AnimatedSection className="max-w-3xl mx-auto">
+            <Card className="relative overflow-hidden border-2 border-accent/30 shadow-elevated p-10 md:p-14 text-center">
+              {/* Decorative corner accents */}
+              <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-accent/10 to-transparent rounded-br-full" />
+              <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-accent/10 to-transparent rounded-tl-full" />
+              
+              <motion.div
+                className="inline-block mb-6"
+                animate={{ rotate: [0, 5, -5, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="p-5 bg-accent/10 border-2 border-accent rounded-2xl">
+                  <Handshake className="h-10 w-10 text-accent" />
+                </div>
+              </motion.div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                Want to Partner With Us?
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+                Are you an organization, landowner, or community group looking to bring a project to life? 
+                Let's work together to create something impactful.
+              </p>
+              
+              <motion.a
+                href="mailto:gen.civil.connect@gmail.com"
+                className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-4 rounded-md shadow-elevated hover:shadow-glow transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Mail className="h-5 w-5" />
+                gen.civil.connect@gmail.com
+              </motion.a>
+            </Card>
           </AnimatedSection>
         </div>
       </section>
@@ -267,7 +275,7 @@ const GetInvolved = () => {
               },
             ].map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 0.1}>
-                <Card className="p-6 text-center hover:shadow-elevated transition-all duration-300 h-full flex flex-col items-center justify-between">
+                <Card className="p-6 hover:shadow-elevated transition-all duration-300 h-full flex flex-col items-center justify-between text-center">
                   <div>
                     <motion.div
                       animate={{ scale: [1, 1.05, 1] }}
