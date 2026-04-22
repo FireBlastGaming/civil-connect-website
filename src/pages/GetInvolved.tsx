@@ -154,43 +154,79 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Partner With Us CTA */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="max-w-3xl mx-auto">
-            <Card className="relative overflow-hidden border-2 border-accent/30 shadow-elevated p-10 md:p-14 text-center">
-              {/* Decorative corner accents */}
-              <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-accent/10 to-transparent rounded-br-full" />
-              <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-accent/10 to-transparent rounded-tl-full" />
-              
-              <motion.div
-                className="inline-block mb-6"
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="p-5 bg-accent/10 border-2 border-accent rounded-2xl">
-                  <Handshake className="h-10 w-10 text-accent" />
-                </div>
-              </motion.div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Want to Partner With Us?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-                Are you an organization, landowner, or community group looking to bring a project to life? 
-                Let's work together to create something impactful.
-              </p>
-              
-              <motion.a
-                href="mailto:gen.civil.connect@gmail.com"
-                className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-4 rounded-md shadow-elevated hover:shadow-glow transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Mail className="h-5 w-5" />
-                gen.civil.connect@gmail.com
-              </motion.a>
-            </Card>
+      {/* Partner With Us — Special Highlighted Card */}
+      <section className="py-24 bg-gradient-subtle relative overflow-hidden">
+        {/* Soft ambient glows */}
+        <motion.div
+          className="absolute -top-20 -left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.6, 0.4] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute -bottom-20 -right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
+          animate={{ scale: [1.15, 1, 1.15], opacity: [0.6, 0.4, 0.6] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <AnimatedSection className="max-w-2xl mx-auto">
+            <motion.div
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="relative"
+            >
+              {/* Glowing gradient border wrapper */}
+              <div className="absolute -inset-[2px] bg-gradient-to-br from-accent via-accent/40 to-primary rounded-3xl blur-sm opacity-70" />
+
+              <Card className="relative rounded-3xl border-0 bg-background p-10 md:p-14 text-center overflow-hidden">
+                {/* Subtle inner pattern */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 pointer-events-none" />
+
+                {/* Small ribbon label */}
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="relative inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-accent/10 border border-accent/30"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                  <span className="text-xs font-semibold tracking-widest uppercase text-accent">
+                    For Organizations & Partners
+                  </span>
+                </motion.div>
+
+                {/* Icon */}
+                <motion.div
+                  className="relative inline-flex items-center justify-center mb-6"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <div className="absolute inset-0 bg-accent/30 blur-2xl rounded-full" />
+                  <div className="relative p-5 bg-gradient-to-br from-accent to-accent/70 rounded-2xl shadow-elevated">
+                    <Handshake className="h-10 w-10 text-accent-foreground" />
+                  </div>
+                </motion.div>
+
+                <h2 className="relative text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
+                  Want to Partner With Us?
+                </h2>
+                <p className="relative text-base md:text-lg text-muted-foreground mb-8 max-w-md mx-auto leading-relaxed">
+                  Are you an organization, landowner, or community group with a project idea?
+                  Let's create something impactful together.
+                </p>
+
+                <motion.a
+                  href="mailto:gen.civil.connect@gmail.com"
+                  className="relative inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-base md:text-lg px-8 py-4 rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                >
+                  <Mail className="h-5 w-5" />
+                  gen.civil.connect@gmail.com
+                </motion.a>
+              </Card>
+            </motion.div>
           </AnimatedSection>
         </div>
       </section>
