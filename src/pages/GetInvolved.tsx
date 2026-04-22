@@ -2,8 +2,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Network, Trophy, Rocket, Heart, Mail, Linkedin } from "lucide-react";
+import { Briefcase, GraduationCap, Network, Trophy, Rocket, Heart, Mail, Linkedin, Handshake } from "lucide-react";
 import heroJoin from "@/assets/hero-join.jpg";
+
 const GetInvolved = () => {
   const benefits = [{
     icon: Briefcase,
@@ -30,7 +31,9 @@ const GetInvolved = () => {
     title: "Community Impact",
     description: "Make a tangible difference in Edmonton's development while gaining satisfaction from meaningful contribution."
   }];
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden mt-20">
         <div className="absolute inset-0">
@@ -39,15 +42,7 @@ const GetInvolved = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 1
-        }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-6">
               Join Civil Connect Edmonton
             </h1>
@@ -72,17 +67,10 @@ const GetInvolved = () => {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => <AnimatedSection key={benefit.title} delay={index * 0.1}>
+            {benefits.map((benefit, index) => (
+              <AnimatedSection key={benefit.title} delay={index * 0.1}>
                 <Card className="p-6 h-full hover:shadow-card transition-all duration-300 border-2 hover:border-accent group">
-                  <motion.div className="mb-4" animate={{
-                scale: [1, 1.05, 1]
-              }} transition={{
-                scale: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}>
+                  <motion.div className="mb-4" animate={{ scale: [1, 1.05, 1] }} transition={{ scale: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}>
                     <div className="inline-block p-4 bg-gradient-accent rounded-full">
                       <benefit.icon className="h-8 w-8 text-accent-foreground" />
                     </div>
@@ -92,7 +80,8 @@ const GetInvolved = () => {
                   </h3>
                   <p className="text-muted-foreground">{benefit.description}</p>
                 </Card>
-              </AnimatedSection>)}
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
@@ -165,18 +154,77 @@ const GetInvolved = () => {
         </div>
       </section>
 
+      {/* Partner With Us — Special Highlighted Card */}
+      <section className="py-24 bg-gradient-subtle relative overflow-hidden">
+        {/* Soft ambient glows */}
+        <motion.div
+          className="absolute -top-20 -left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.6, 0.4] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute -bottom-20 -right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
+          animate={{ scale: [1.15, 1, 1.15], opacity: [0.6, 0.4, 0.6] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <AnimatedSection className="max-w-2xl mx-auto">
+            <motion.div
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="relative"
+            >
+              {/* Glowing gradient border wrapper */}
+              <div className="absolute -inset-[2px] bg-gradient-to-br from-accent via-accent/40 to-primary rounded-3xl blur-sm opacity-70" />
+
+              <Card className="relative rounded-3xl border-0 bg-background p-10 md:p-14 text-center overflow-hidden">
+                {/* Subtle inner pattern */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 pointer-events-none" />
+
+                {/* Small ribbon label */}
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="relative inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                  <span className="text-xs font-semibold tracking-widest uppercase text-accent">
+                    For Organizations & Partners
+                  </span>
+                </motion.div>
+
+                <h2 className="relative text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
+                  Want to Partner With Us?
+                </h2>
+                <p className="relative text-base md:text-lg text-muted-foreground mb-8 max-w-md mx-auto leading-relaxed">
+                  Are you an organization, landowner, or community group with a project idea?
+                  Let's create something impactful together.
+                </p>
+
+                <motion.a
+                  href="mailto:gen.civil.connect@gmail.com"
+                  className="relative inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-base md:text-lg px-8 py-4 rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                >
+                  <Mail className="h-5 w-5" />
+                  gen.civil.connect@gmail.com
+                </motion.a>
+              </Card>
+            </motion.div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Join Discord CTA */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <AnimatedSection className="max-w-2xl mx-auto text-center">
             <Card className="p-12 border-2 shadow-card">
-              <motion.div animate={{
-              scale: [1, 1.05, 1]
-            }} transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }} className="inline-block mb-6">
+              <motion.div animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} className="inline-block mb-6">
                 <svg className="h-20 w-20 text-accent mx-auto" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" />
                 </svg>
@@ -189,11 +237,7 @@ const GetInvolved = () => {
                 Connect with our community on Discord to get started, meet members, and stay updated on all our projects and events
               </p>
               
-              <motion.div whileHover={{
-              scale: 1.05
-            }} whileTap={{
-              scale: 0.95
-            }}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6" onClick={() => window.open("https://discord.gg/7dWt8WNuqh", "_blank")}>
                   Join Our Discord Server
                 </Button>
@@ -203,7 +247,7 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Connect With Us - Social Links */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-12">
@@ -215,92 +259,74 @@ const GetInvolved = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <AnimatedSection delay={0.1}>
-              <Card className="p-8 text-center hover:shadow-elevated transition-all">
-                <motion.div animate={{
-                scale: [1, 1.05, 1]
-              }} transition={{
-                scale: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}>
-                  <svg className="h-16 w-16 text-accent mx-auto mb-4" viewBox="0 0 24 24" fill="currentColor">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                icon: (
+                  <svg className="h-12 w-12 text-accent" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
-                </motion.div>
-                <h3 className="text-2xl font-bold text-primary mb-3">Instagram</h3>
-                <p className="text-muted-foreground mb-4">
-                  Follow us for updates, project highlights, and behind-the-scenes
-                </p>
-                <Button variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground" onClick={() => window.open("https://www.instagram.com/civilconnectedmonton/", "_blank")}>
-                  @civilconnectedmonton
-                </Button>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <Card className="p-8 text-center hover:shadow-elevated transition-all">
-                <motion.div animate={{
-                scale: [1, 1.05, 1]
-              }} transition={{
-                scale: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}>
-                  <svg className="h-16 w-16 text-accent mx-auto mb-4" viewBox="0 0 24 24" fill="currentColor">
+                ),
+                title: "Instagram",
+                description: "Follow us for updates and highlights",
+                label: "@civilconnectedmonton",
+                url: "https://www.instagram.com/civilconnectedmonton/",
+              },
+              {
+                icon: (
+                  <svg className="h-12 w-12 text-accent" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" />
                   </svg>
-                </motion.div>
-                <h3 className="text-2xl font-bold text-primary mb-3">Discord</h3>
-                <p className="text-muted-foreground mb-4">
-                  Join our community server to chat with members and stay informed
-                </p>
-                <Button variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground" onClick={() => window.open("https://discord.gg/7dWt8WNuqh", "_blank")}>
-                  Join Discord Server
-                </Button>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <Card className="p-8 text-center hover:shadow-elevated transition-all">
-                <motion.div animate={{
-                scale: [1, 1.05, 1]
-              }} transition={{
-                scale: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}>
-                  <Linkedin className="h-16 w-16 text-accent mx-auto mb-4" />
-                </motion.div>
-                <h3 className="text-2xl font-bold text-primary mb-3">LinkedIn</h3>
-                <p className="text-muted-foreground mb-4">
-                  Connect with us professionally and stay updated on our initiatives
-                </p>
-                <Button variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground" onClick={() => window.open("https://www.linkedin.com/company/civil-connect-edmonton/", "_blank")}>
-                  Follow on LinkedIn
-                </Button>
-              </Card>
-            </AnimatedSection>
+                ),
+                title: "Discord",
+                description: "Chat with members and stay informed",
+                label: "Join Discord Server",
+                url: "https://discord.gg/7dWt8WNuqh",
+              },
+              {
+                icon: <Linkedin className="h-12 w-12 text-accent" />,
+                title: "LinkedIn",
+                description: "Connect with us professionally",
+                label: "Follow on LinkedIn",
+                url: "https://www.linkedin.com/company/civil-connect-edmonton/",
+              },
+              {
+                icon: <Mail className="h-12 w-12 text-accent" />,
+                title: "Email Us",
+                description: "Partnerships & inquiries",
+                label: "gen.civil.connect@gmail.com",
+                url: "mailto:gen.civil.connect@gmail.com",
+              },
+            ].map((item, index) => (
+              <AnimatedSection key={item.title} delay={index * 0.1}>
+                <Card className="p-6 hover:shadow-elevated transition-all duration-300 h-full flex flex-col items-center justify-between text-center">
+                  <div>
+                    <motion.div
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="mb-4"
+                    >
+                      {item.icon}
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground text-xs"
+                    onClick={() => window.open(item.url, item.url.startsWith("mailto") ? "_self" : "_blank")}
+                  >
+                    {item.label}
+                  </Button>
+                </Card>
+              </AnimatedSection>
+            ))}
           </div>
-
-          <AnimatedSection className="mt-12 text-center" delay={0.3}>
-            <Card className="p-6 bg-primary-foreground/10 border-primary-foreground/20 max-w-2xl mx-auto">
-              <Mail className="h-10 w-10 text-primary-foreground mx-auto mb-3" />
-              <p className="text-primary-foreground/90">
-                <strong>Meeting Times:</strong> Check our social media for current meeting
-                schedules and event announcements
-              </p>
-            </Card>
-          </AnimatedSection>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default GetInvolved;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.jpg";
 
@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Mission */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -96,6 +96,21 @@ const Footer = () => {
                 <span>Connect on LinkedIn</span>
               </a>
             </div>
+          </div>
+
+          {/* Partner With Us */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Partner With Us</h3>
+            <p className="text-sm text-primary-foreground/80 mb-3">
+              Interested in collaborating on a project? We'd love to hear from you.
+            </p>
+            <a
+              href="mailto:gen.civil.connect@gmail.com"
+              className="flex items-center gap-2 text-sm text-accent hover:text-accent/80 transition-colors font-semibold"
+            >
+              <Mail className="h-4 w-4" />
+              gen.civil.connect@gmail.com
+            </a>
           </div>
         </div>
 

@@ -11,7 +11,7 @@ import NeighbourhoodProject from "./pages/NeighbourhoodProject";
 import NapRoomProject from "./pages/NapRoomProject";
 import LibraryProject from "./pages/LibraryProject";
 import GetInvolved from "./pages/GetInvolved";
-import DesignContest from "./pages/DesignContest";
+
 import Conference from "./pages/Conference";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
@@ -33,7 +33,7 @@ const App = () => (
             <Route path="/projects/nap-room" element={<NapRoomProject />} />
             <Route path="/projects/library" element={<LibraryProject />} />
             <Route path="/get-involved" element={<GetInvolved />} />
-            <Route path="/design-contest" element={<DesignContest />} />
+            
             <Route path="/conference" element={<Conference />} />
             <Route path="/events" element={<Events />} />
             <Route path="*" element={<NotFound />} />
