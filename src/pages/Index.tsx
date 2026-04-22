@@ -461,16 +461,16 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/get-involved">
-                <Button
-                  size="lg"
-                  className="text-lg px-10 py-6 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105"
+                <motion.span
+                  className="inline-flex items-center justify-center gap-2 h-[60px] text-lg px-10 rounded-md bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
                 >
                   Get Involved Today
-                </Button>
+                </motion.span>
               </Link>
               <motion.a
                 href="mailto:gen.civil.connect@gmail.com"
-                className="inline-flex items-center gap-2 text-lg px-10 py-6 rounded-md bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 h-[60px] text-lg px-10 rounded-md bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
                 <Mail className="h-5 w-5" />
