@@ -188,24 +188,12 @@ const GetInvolved = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="relative inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-accent/10 border border-accent/30"
+                  className="relative inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent">
                     For Organizations & Partners
                   </span>
-                </motion.div>
-
-                {/* Icon */}
-                <motion.div
-                  className="relative inline-flex items-center justify-center mb-6"
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <div className="absolute inset-0 bg-accent/30 blur-2xl rounded-full" />
-                  <div className="relative p-5 bg-gradient-to-br from-accent to-accent/70 rounded-2xl shadow-elevated">
-                    <Handshake className="h-10 w-10 text-accent-foreground" />
-                  </div>
                 </motion.div>
 
                 <h2 className="relative text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
