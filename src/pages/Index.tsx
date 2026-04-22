@@ -465,7 +465,8 @@ const Index = () => {
                   className="inline-flex items-center justify-center gap-2 h-[60px] text-lg px-10 rounded-md bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-elevated hover:shadow-glow transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                 >
-                  🚀 Get Involved Today
+                  <Rocket className="h-5 w-5" />
+                  Get Involved Today
                 </motion.span>
               </Link>
               <motion.a
